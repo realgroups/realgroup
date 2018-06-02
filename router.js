@@ -35,4 +35,8 @@ module.exports = function(app, db, initDb)
         res.send('{ pageCount: -1 }');
       }
     });
+
+    initDb(function(err){
+      console.log('Error connecting to Mongo. Message:\n'+err);
+    });
 }
