@@ -56,7 +56,7 @@ var initDb = function(callback) {
   });
 };
 
-var router  = require('./router')(app, db)
+var router  = require('./router')(app, db, initDb)
 
 // error handling
 app.use(function(err, req, res, next){
