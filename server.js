@@ -1,8 +1,7 @@
 //  OpenShift sample Node application
 var express = require('express'),
     app     = express(),
-    morgan  = require('morgan'),
-    router  = require('./router')(app);
+    morgan  = require('morgan');
     
 Object.assign=require('object-assign')
 
@@ -56,6 +55,8 @@ var initDb = function(callback) {
     console.log('Connected to MongoDB at: %s', mongoURL);
   });
 };
+
+var router  = require('./router')(app, db);
 
 // error handling
 app.use(function(err, req, res, next){
