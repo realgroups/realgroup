@@ -2,7 +2,7 @@
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan'),
-    router  = require('router')(app);
+    router  = require('./router')(app);
     
 Object.assign=require('object-assign')
 
