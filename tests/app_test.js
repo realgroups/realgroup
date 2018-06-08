@@ -17,7 +17,6 @@ describe('Basic routes tests', function() {
             done();
         })
     })
-*/
 
     it('GET to /members/test should return 200', function(done){
         chai.request(reqServer)
@@ -27,5 +26,5 @@ describe('Basic routes tests', function() {
             done();
         })
     })
-
+*/
 })
