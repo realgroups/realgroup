@@ -3,7 +3,7 @@ var morgan  = require('morgan'),
     express = require('express'),
     app     = express();
 
-var router  = require('./router')(app, db, dbDetails, initDb);
+var router  = require('./router')(app);
 
 
 app.engine('html', require('ejs').renderFile);

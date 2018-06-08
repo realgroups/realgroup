@@ -1,4 +1,4 @@
-module.exports = function(app, db, dbDetails, initDb)
+module.exports = function(app)
 {
   
   Object.assign=require('object-assign')
