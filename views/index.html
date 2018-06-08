@@ -4,38 +4,34 @@
  <% include ./_header.ejs %>
 </head>
 <body>
-
 <section class='container'>
-          <hgroup>
-            <h1>Welcome to your Node.js application for realgroup on OpenShift</h1>
-          </hgroup>
+  <hgroup>
+    <h1>Welcome to your Node.js application for realgroup on OpenShift</h1>
+  </hgroup>
 
+  <div class="row">
+    <section class="col-xs-12 col-sm-6 col-md-6">
+      <h2>Request information</h2>
+      <p>Page view count:
+      <% if (pageCountMessage) { %>
+          <span class="code" id="count-value"><%=pageCountMessage%></span>
+          </p>
+          <div class="code"><h3>DB Connection Info:</h3>
+            <table style='margin-left: 20px'>
+                <tr><td>Type:</td><td><%= dbInfo.type %></td></tr>
+                <tr><td>URL:</td><td><%= dbInfo.url %></td></tr>
+            </table>
+          </div>
+      <% } else { %>
+          <span class="code" id="count-value">No database configured</span>
+          </p>
+      <%} %>
+    </section>
+  </div>
 
-        <div class="row">
-
-          <section class="col-xs-12 col-sm-6 col-md-6">
-
-                <h2>Request information</h2>
-                <p>Page view count:
-                <% if (pageCountMessage) { %>
-                   <span class="code" id="count-value"><%=pageCountMessage%></span>
-                   </p>
-                    <div class="code"><h3>DB Connection Info:</h3>
-                      <table style='margin-left: 20px'>
-                          <tr><td>Type:</td><td><%= dbInfo.type %></td></tr>
-                          <tr><td>URL:</td><td><%= dbInfo.url %></td></tr>
-                      </table>
-                    </div>
-                <% } else { %>
-                   <span class="code" id="count-value">No database configured</span>
-                   </p>
-                <%} %>
-          </section>
-        </div>
-
-        <footer>
-         <% include ./_footer.ejs %>
-        </footer>
+  <footer>
+    <% include ./_footer.ejs %>
+  </footer>
 </section>
 </body>
 </html>
