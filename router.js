@@ -42,7 +42,4 @@ module.exports = function(app, db, initDb)
     }
   });
 
-  initDb(function(err){
-    console.log('Error connecting to Mongo. Message:\n'+err);
-  });
 }
