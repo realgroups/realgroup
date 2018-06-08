@@ -65,7 +65,7 @@ initDb(function(err){
   console.log('Error connecting to Mongo. Message:\n'+err);
 });
 
-var router  = require('./router')(app, mongodb, initDb);
+var router  = require('./router')(app, db, dbDetails, initDb);
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
