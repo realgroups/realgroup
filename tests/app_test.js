@@ -8,7 +8,7 @@ chai.use(chaiHTTP);
 reqServer = process.env.HTTP_TEST_SERVER || server
 
 describe('Basic routes tests', function() {
-
+/*
     it('GET to / should return 200', function(done){
         chai.request(reqServer)
         .get('/')
@@ -17,7 +17,8 @@ describe('Basic routes tests', function() {
             done();
         })
     })
-/*
+*/
+
     it('GET to /members/test should return 200', function(done){
         chai.request(reqServer)
         .get('/members/test')
@@ -26,5 +27,5 @@ describe('Basic routes tests', function() {
             done();
         })
     })
-*/
+
 })
