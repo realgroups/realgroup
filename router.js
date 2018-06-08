@@ -1,4 +1,4 @@
-module.exports = function(app, db, initDb)
+module.exports = function(app, mongodb, initDb)
 {
   // try to initialize the db on every request if it's not already
   // initialized.
